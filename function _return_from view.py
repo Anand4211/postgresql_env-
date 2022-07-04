@@ -21,14 +21,14 @@ def connect():
         connection.initialize(logger)
 
         cursor = connection.cursor()
-        create_t2 = """ drop table if exists employeew  cascade """
+        create_t2 = """ drop table if exists department  cascade """
         cursor.execute(create_t2)
         connection.commit()
-        create_t2 = """ drop table if exists salary """
+        create_t2 = """ drop table if exists  salary cascade """
         cursor.execute(create_t2)
         connection.commit()
 
-        create_table1 = """create table employeew(id int primary key,employee_name varchar(30),
+        create_table1 = """create table department(id int primary key,employee_name varchar(30),
         employee_address varchar(20))"""
         cursor.execute(create_table1)
         connection.commit()
@@ -39,7 +39,7 @@ def connect():
         connection.commit()
         logging.info("salary table created")
 
-        insert_data = """insert into employeew(id, employee_name, employee_address) values (2,'akash', 'noida,up'),(3,
+        insert_data = """insert into department(id, employee_name, employee_address) values (2,'akash', 'noida,up'),(3,
         'uday','mumbai,maharastra'),(4,'adam','london') """
         cursor.execute(insert_data)
         connection.commit()
@@ -50,15 +50,6 @@ def connect():
         connection.commit()
         logging.info("employee data inserted")
 
-        view_from_1_table = """CREATE VIEW View3 AS   
-        SELECT employee_name   
-        FROM employeew 
-        WHERE id > '2';   """
-        cursor.execute(view_from_1_table)
-        connection.commit()
-        cursor.execute("select * from view3")
-        logging.info(cursor.fetchall())
-
         view_from_2_table = """CREATE VIEW View AS   
         SELECT e.employee_name ,s.salary ,s.technology 
         FROM employeew as e
@@ -68,6 +59,19 @@ def connect():
         cursor.execute(view_from_2_table)
         connection.commit()
         cursor.execute("select * from view ")
+        logging.info(cursor.fetchall())
+
+        function = """create function take_values_from_view( pay int) returns  SETOF View AS
+                      $$
+                         select * from View  where salary > pay 
+                      $$
+                        language sql """
+        cursor.execute(function)
+
+        logging.info("function created")
+
+        # call function
+        cursor.execute('''select take_values_from_view(1000)''')
         logging.info(cursor.fetchall())
 
     except (Exception, psycopg2.Error) as error:

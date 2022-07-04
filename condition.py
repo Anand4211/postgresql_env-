@@ -29,8 +29,7 @@ def connect():
         connection.commit()
         logging.info("people table created")
 
-        insert_data = """insert into people( people_name, people_age) values ('deepaks',39),('rohit',45),('rahul',
-        44) """
+        insert_data = """insert into people( people_name, people_age) values ('deepaks',39),('rohit',45),('rahul',44) """
         cursor.execute(insert_data)
         connection.commit()
         logging.info("car data inserted")

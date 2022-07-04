@@ -21,7 +21,7 @@ def connect():
         connection.initialize(logger)
 
         cursor = connection.cursor()
-        create_t2 = """ drop table if exists employeew  cascade """
+        create_t2 = """ drop table if exists employeew """
         cursor.execute(create_t2)
         connection.commit()
         create_t2 = """ drop table if exists salary """

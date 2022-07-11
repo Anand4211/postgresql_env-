@@ -30,7 +30,8 @@ def connect():
         cursor.execute(create_t2)
         connection.commit()
 
-        create_table1 = """create table client1 (id int primary key,client_name varchar(30),client_address varchar(20))"""
+        create_table1 = """create table client1 (id int primary key,client_name varchar(30),client_address varchar(
+        20)) """
         cursor.execute(create_table1)
         connection.commit()
         logging.info("client1 table created")

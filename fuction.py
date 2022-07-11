@@ -8,8 +8,10 @@ logging.basicConfig(level=logging.DEBUG)
 logger = logging.getLogger("logger information")
 
 
-def connect():
-    """ Connect to the PostgreSQL database server """
+def connect(n, s):
+    """ Connect to the PostgreSQL database server
+
+    """
 
     try:
         # read connection parameters
@@ -22,7 +24,7 @@ def connect():
 
         cursor = connection.cursor()
 
-        create_t2 = """ drop table if exists car """
+        create_t2 = """ drop table if exists car cascade """
         cursor.execute(create_t2)
         connection.commit()
 
@@ -54,15 +56,18 @@ def connect():
     $$;  """
         # cursor.execute(function)
 
-        # print("function is created")
+        # logging.info("function is created")
 
-        explain_quaries = """ Select get_car_Price(26000,1600000);  """
-        cursor.execute(explain_quaries)
+        explain_quaries = """ Select get_car_Price(%s,%s);  """
+        cursor.execute(explain_quaries, (n, s,))
         logging.info(cursor.fetchall())
 
     except (Exception, psycopg2.Error) as error:
         print("Error in create operation", error)
 
 
+n = int(input())
+s = int(input())
+
 if __name__ == "__main__":
-    connect()
+    connect(n, s)

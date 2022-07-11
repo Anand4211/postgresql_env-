@@ -51,7 +51,7 @@ def connect():
         logging.info(cursor.fetchall())
 
         cursor.execute('''delete from supplier where supplier_id = 9''')
-        logging.info('deleeted')
+        logging.info('deleted')
 
         cursor.execute('''select * from product''')
         logging.info(cursor.fetchall())

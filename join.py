@@ -60,7 +60,7 @@ def connect():
         # for joins
         joins = """SELECT e.employee_name ,s.salary ,s.technology 
         FROM employee3 as e
-        join salary as s
+        join salary1 as s
         on e.id = s.id
         WHERE s.salary > '50000';  """
         cursor.execute(joins)
@@ -68,7 +68,8 @@ def connect():
         logging.info(cursor.fetchall())
 
     except (Exception, psycopg2.Error) as Error:
-        print("error while inserted")
+        logging.info("error while inserted")
+        logging.info(Error)
 
 
 if __name__ == "__main__":

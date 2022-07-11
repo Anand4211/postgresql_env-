@@ -53,14 +53,16 @@ def connect():
         connection.commit()
         logging.info("employee data inserted")
 
-        full_joins = """select  employee3.employee_name,salary1.salary from employee3  full join salary1  on employee3.id 
-        =salary1.id; """
+        full_joins = """select  employee3.employee_name,salary1.salary from employee3  full join salary1  
+        on employee3.id =salary1.id; """
+
         cursor.execute(full_joins)
         connection.commit()
         logging.info(cursor.fetchall())
 
     except (Exception, psycopg2.Error) as Error:
-        print("error while inserted")
+        logging.info("error while inserted")
+        logging.info(Error)
 
 
 if __name__ == "__main__":

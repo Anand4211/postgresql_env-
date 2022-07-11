@@ -1,0 +1,56 @@
+2022-07-11 13:47:08,143 b'select * from salary1' 
+2022-07-11 13:47:08,144 This is the values from this table:- [(2, 100000, 'dotnet'), (3, 120000, 'python'), (4, 2000000, 'python,java,sql'), (5, 400000, 'go,java,docker,sql,python,html,css,js')] 
+2022-07-11 13:48:29,130 This is the values from this table:- [(2, 100000, 'dotnet'), (3, 120000, 'python'), (4, 2000000, 'python,java,sql'), (5, 400000, 'go,java,docker,sql,python,html,css,js')] 
+2022-07-11 13:49:09,903 b'select * from salary1' 
+2022-07-11 13:49:09,904 This is the values from this table:- [(2, 100000, 'dotnet'), (3, 120000, 'python'), (4, 2000000, 'python,java,sql'), (5, 400000, 'go,java,docker,sql,python,html,css,js')] 
+2022-07-11 13:49:37,548 b'select * from salary1' 
+2022-07-11 13:49:37,548  error in insertion operation cursor already closed 
+2022-07-11 13:49:37,548 None 
+2022-07-11 13:49:37,548 None 
+2022-07-11 13:50:37,775 b'select * from people' 
+2022-07-11 13:50:37,775 This is the values from this table:- [('deepaks', 39), ('rohit', 45), ('rahul', 44), ('deepaks', 39), ('rohit', 45), ('rahul', 44)] 
+2022-07-11 13:51:26,516 b'select * from people' 
+2022-07-11 13:51:26,517  error in insertion operation cursor already closed 
+2022-07-11 13:51:26,517 None 
+2022-07-11 13:51:26,517 None 
+2022-07-11 13:52:50,940 b'select * from salary1' 
+2022-07-11 13:52:50,940 This is the values from this table:- [(2, 100000, 'dotnet'), (3, 120000, 'python'), (4, 2000000, 'python,java,sql'), (5, 400000, 'go,java,docker,sql,python,html,css,js')] 
+2022-07-11 13:54:24,547 b'select * from sal' 
+2022-07-11 13:54:24,547  error in view operation relation "sal" does not exist
+LINE 1: select * from sal
+                      ^
+ 
+2022-07-11 13:54:24,547 None 
+2022-07-11 13:54:43,358 b'select * from salary1' 
+2022-07-11 13:54:43,358 This is the values from this table:- [(2, 100000, 'dotnet'), (3, 120000, 'python'), (4, 2000000, 'python,java,sql'), (5, 400000, 'go,java,docker,sql,python,html,css,js')] 
+2022-07-11 13:55:13,046 b'select * from salary1' 
+2022-07-11 13:55:13,046  error in view operation cursor already closed 
+2022-07-11 13:55:13,047 None 
+2022-07-11 13:55:13,047 None 
+2022-07-11 13:56:05,339 b'select * from people' 
+2022-07-11 13:56:05,343 This is the values from this table:- [('deepaks', 39), ('rohit', 45), ('rahul', 44), ('deepaks', 39), ('rohit', 45), ('rahul', 44)] 
+2022-07-11 13:56:33,923 this is not in database 
+2022-07-11 13:56:33,924 b'select * from people' 
+2022-07-11 13:56:33,925 None 
+2022-07-11 13:57:33,544 this is not in database 
+2022-07-11 13:57:33,654 b'drop table  if exists salary1 cascade' 
+2022-07-11 13:57:33,668 deleted 
+2022-07-11 13:58:18,039 this is not in database 
+2022-07-11 13:58:18,084 b'drop table  if exists test cascade' 
+2022-07-11 13:58:18,148 deleted 
+2022-07-11 13:59:07,831 this is not in database 
+2022-07-11 13:59:07,936 b'drop table  if exists cliens cascade' 
+2022-07-11 13:59:07,950 deleted 
+2022-07-11 13:59:47,896 b'drop table  if exists cliens cascade' 
+2022-07-11 13:59:47,897  error in view operation cursor already closed 
+2022-07-11 13:59:47,897 None 
+2022-07-11 14:01:11,867 b'create table wer(qw int)' 
+2022-07-11 14:01:11,901 table created 
+2022-07-11 14:01:29,458 this is not in database 
+2022-07-11 14:01:29,458 b'create table wer(qw int)' 
+2022-07-11 14:05:26,494 b'select * from people' 
+2022-07-11 14:05:26,494 This is the values from this table:- [('deepaks', 39), ('rohit', 45), ('rahul', 44), ('deepaks', 39), ('rohit', 45), ('rahul', 44)] 
+2022-07-11 14:05:59,706 b'select * from people' 
+2022-07-11 14:05:59,706  error in view operation cursor already closed 
+2022-07-11 14:05:59,707 None 
+2022-07-11 14:05:59,707 None 

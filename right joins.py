@@ -67,7 +67,7 @@ def connect():
         logging.info(cursor.fetchall())
 
     except (Exception, psycopg2.Error) as Error:
-        logging.info("error while inserted")
+        logging.info(Error)
 
 
 if __name__ == "__main__":
